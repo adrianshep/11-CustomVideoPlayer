@@ -9,5 +9,23 @@ const ranges = player.querySelector('.player__slider');
 
 
 /* build out functions */
+function togglePlay() {
+  const method = video.paused ? 'play' : 'pause';
+  video[method]();
+/*  if (video.paused) {
+    video.play();
+  } else {
+    video.pause();
+  } */
+}
+
+function updateButton() {
+  console.log('Update the button');
+}
 
 /* hook up the event listeners */
+video.addEventListener('click', togglePlay);
+video.addEventListener('play', updateButton);
+video.addEventListener('pause', updateButton);
+
+toggle.addEventListener('click', togglePlay);
